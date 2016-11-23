@@ -1,8 +1,8 @@
 {
-	"version": "2.0.0",
+	"version": "2.0.3",
 	"compilerOptions": {
 		"declaration": false,
-		"module": "commonjs",
+		"module": "umd",
 		"noImplicitAny": true,
 		"noImplicitThis": true,
 		"strictNullChecks": true,
@@ -11,7 +11,7 @@
 		"sourceMap": true,
 		"inlineSources": true,
 		"target": "es5",
-		"moduleResolution": "classic"
+		"moduleResolution": "node"
 	},
 	"include": [
 		"./typings/index.d.ts",

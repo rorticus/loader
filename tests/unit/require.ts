@@ -18,8 +18,8 @@ function setErrorHandler(dfd: any) {
 function reloadLoader() {
 	let loaderPath = (<any> require).toUrl('src/loader.js');
 
-	global.define = null;
-	global.require = null;
+	(<any> global).define = null;
+	(<any> global).require = null;
 	delete (<any> nodeRequire).cache[(<any> nodeRequire).resolve(loaderPath)];
 	nodeRequire(loaderPath);
 }
@@ -539,7 +539,7 @@ registerSuite({
 
 	nodeRequire() {
 		assert.isFunction(global.require.nodeRequire, '"require.nodeRequire" should be a function');
-		assert.isNotNull(global.require('events').EventEmitter, '"require.nodeRequire" should load module');
+		assert.isNotNull((<any> global.require('events')).EventEmitter, '"require.nodeRequire" should load module');
 	},
 
 	toAbsMid(this: any) {

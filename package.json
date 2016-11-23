@@ -16,18 +16,21 @@
   "scripts": {
     "test": "grunt test"
   },
-  "typings": "dojo-loader.d.ts",
   "devDependencies": {
+	"@types/benchmark": "~1.0.0",
+	"@types/chai": "~3.4.0",
+	"@types/sinon": "~1.16.0",
+	"@types/node": "6.0.51",
     "codecov.io": "0.1.6",
     "dts-generator": "~1.7.0",
     "glob": "^7.0.0",
     "grunt": "^1.0.1",
     "grunt-contrib-uglify": "^1.0.1",
-    "grunt-dojo2": ">=2.0.0-beta.7",
-    "intern": ">=3.2.0",
+    "grunt-dojo2": ">=2.0.0-beta.19",
+    "intern": "3.2.2",
+	"sinon": "~1.16.0",
     "istanbul": "0.4.3",
-    "remap-istanbul": "0.6.4",
-    "tslint": "next",
-    "typescript": "2.0.2"
+    "tslint": "^3.15.1",
+    "typescript": "2.0.3"
   }
 }

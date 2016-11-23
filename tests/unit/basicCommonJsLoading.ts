@@ -18,8 +18,8 @@ function setErrorHandler(dfd: any) {
 function reloadLoader() {
 	let loaderPath = (<any> require).toUrl('src/loader.js');
 
-	global.define = null;
-	global.require = null;
+	(<any> global).define = null;
+	(<any> global).require = null;
 
 	if ((<any> nodeRequire).cache) {
 		delete (<any> nodeRequire).cache[(<any> nodeRequire).resolve(loaderPath)];
